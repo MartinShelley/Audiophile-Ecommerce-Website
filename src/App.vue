@@ -1,12 +1,13 @@
 <template>
   <TheNavigation></TheNavigation>
   <router-view></router-view>
+  <TheFooter></TheFooter>
 </template>
 
 <script>
 import TheNavigation from "./components/TheNavigation.vue";
-//import HomePage from "./views/HomePage.vue";
-export default { components: { TheNavigation } };
+import TheFooter from "./components/TheFooter.vue";
+export default { components: { TheNavigation, TheFooter } };
 </script>
 
 <style lang="scss">
@@ -60,6 +61,13 @@ h6 {
   letter-spacing: 1.3px;
   line-height: 24px;
   font-weight: 700;
+}
+
+p {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 25px;
+  letter-spacing: 0px;
 }
 
 .overline {
