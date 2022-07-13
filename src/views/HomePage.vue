@@ -1,4 +1,11 @@
 <template>
+  <!-- TO DO 
+Create Button Components
+Make Home Page Responsive
+Mobile Nav
+
+
+-->
   <main>
     <section class="hero">
       <div>
@@ -8,7 +15,7 @@
           Experience natural, lifelike audio and exceptional build quality made
           for the passionate music enthusiast.
         </p>
-        <button class="default1">See Product</button>
+        <ButtonOne></ButtonOne>
       </div>
     </section>
     <div class="container">
@@ -26,10 +33,9 @@
           </div>
         </div>
         <div class="zx7-speaker-banner">
-          <!-- <img src="../assets/home/desktop/image-speaker-zx7.jpg" /> -->
           <div>
             <h4>zx7 speaker</h4>
-            <button>See Product</button>
+            <ButtonTwo>See Product</ButtonTwo>
           </div>
         </div>
         <div class="yx1-earphones-banner">
@@ -38,36 +44,23 @@
           </div>
           <div class="yx1-earphones-text">
             <h4>yx1 earphones</h4>
-            <button>See Product</button>
+            <ButtonTwo></ButtonTwo>
           </div>
         </div>
       </div>
-      <div class="audiophile-intro">
-        <div class="audiophile-intro-content">
-          <h2>Bringing you the <span>best</span> audio gear</h2>
-          <p>
-            Located at the heart of New York City, Audiophile is the premier
-            store for high end headphones, earphones, speakers, and audio
-            accessories. We have a large showroom and luxury demonstration rooms
-            available for you to browse and experience a wide range of our
-            products. Stop by our store to meet some of the fantastic people who
-            make Audiophile the best place to buy your portable audio equipment.
-          </p>
-        </div>
-        <div class="audiophile-into-image">
-          <img src="../assets/shared/desktop/image-best-gear.jpg" />
-        </div>
-      </div>
+      <ShopIntro></ShopIntro>
     </div>
   </main>
 </template>
 
 
 <script>
-import ProductCategoriesNav from "../components/productCategories/ProductCategoriesNav.vue";
-
+import ProductCategoriesNav from "../components/ProductCategories/ProductCategoriesNav.vue";
+import ShopIntro from "../components/ShopIntroBanner/ShopIntro.vue";
+import ButtonOne from "@/components/UI/buttons/ButtonOne.vue";
+import ButtonTwo from "@/components/UI/buttons/ButtonTwo.vue";
 export default {
-  components: { ProductCategoriesNav },
+  components: { ProductCategoriesNav, ShopIntro, ButtonOne, ButtonTwo },
 };
 </script>
 
@@ -105,9 +98,8 @@ main {
         opacity: 0.75;
       }
 
-      button.default1 {
+      button {
         margin-top: 40px;
-        text-transform: uppercase;
         padding: 0;
       }
     }
@@ -161,6 +153,13 @@ main {
           letter-spacing: 1px;
           margin-top: 40px;
         }
+
+        button:hover {
+          background-color: #4c4c4c;
+          color: #fff;
+          border: none;
+          cursor: pointer;
+        }
       }
     }
     .zx7-speaker-banner {
@@ -176,16 +175,6 @@ main {
         h4 {
           text-transform: uppercase;
           margin-top: 0;
-        }
-
-        button {
-          background-color: transparent;
-          width: 160px;
-          height: 48px;
-          color: #000;
-          font-weight: 700;
-          text-transform: uppercase;
-          letter-spacing: 1px;
         }
       }
     }
@@ -219,29 +208,7 @@ main {
           height: 48px;
           text-transform: uppercase;
           font-weight: 700;
-        }
-      }
-    }
-
-    .audiophile-intro {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      column-gap: 125px;
-
-      .audiophile-intro-content {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-
-        h2 {
-          text-transform: uppercase;
-
-          span {
-            color: #d87d4a;
-          }
-        }
-        p {
-          opacity: 0.5;
+          border: 1px solid #000;
         }
       }
     }

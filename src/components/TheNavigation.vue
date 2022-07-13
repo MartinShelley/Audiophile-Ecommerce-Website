@@ -64,4 +64,8 @@ a {
   color: #ffffff;
   text-decoration: none;
 }
+a:hover {
+  cursor: pointer;
+  color: #d87d4a;
+}
 </style>

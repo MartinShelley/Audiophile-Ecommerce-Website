@@ -7,6 +7,7 @@
 <script>
 import TheNavigation from "./components/TheNavigation.vue";
 import TheFooter from "./components/TheFooter.vue";
+
 export default { components: { TheNavigation, TheFooter } };
 </script>
 
@@ -82,17 +83,5 @@ p {
   letter-spacing: 10px;
   line-height: 19px;
   font-weight: 400;
-}
-
-button.default1 {
-  background-color: #d87d4a;
-  padding: 15px 30px;
-  color: #fff;
-  font-size: 13px;
-  letter-spacing: 1px;
-  font-weight: 700;
-  width: 160px;
-  height: 48px;
-  border: none;
 }
 </style>

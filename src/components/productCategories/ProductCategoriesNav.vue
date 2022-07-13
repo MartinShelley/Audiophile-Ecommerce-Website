@@ -6,7 +6,7 @@
         src="./../../assets/shared/desktop/image-headphones.png"
       />
       <h6 class="productCategoryLabel">Headphones</h6>
-      <a class="productCategoryLink subtitle">Shop</a>
+      <ButtonThree></ButtonThree>
     </div>
     <div class="productCategoryCard">
       <img
@@ -14,7 +14,7 @@
         src="./../../assets/shared/desktop/image-speakers.png"
       />
       <h6 class="productCategoryLabel">Speakers</h6>
-      <a class="productCategoryLink subtitle">Shop</a>
+      <ButtonThree></ButtonThree>
     </div>
     <div class="productCategoryCard">
       <img
@@ -22,10 +22,17 @@
         src="./../../assets/shared/desktop/image-earphones.png"
       />
       <h6 class="productCategoryLabel">Earphones</h6>
-      <a class="productCategoryLink subtitle">Shop</a>
+      <ButtonThree></ButtonThree>
     </div>
   </section>
 </template>
+
+<script>
+import ButtonThree from "../UI/buttons/ButtonThree.vue";
+export default {
+  components: { ButtonThree },
+};
+</script>
 
 <style scoped lang="scss">
 #productCategoryNav {
@@ -45,17 +52,14 @@
       height: 160px;
       width: auto;
     }
-
     .productCategoryLabel {
       margin: 0 0 15px;
       text-transform: uppercase;
     }
+  }
 
-    .productCategoryLink {
-      margin-bottom: 30px;
-      text-transform: uppercase;
-      opacity: 0.5;
-    }
+  .productCategoryCard:hover {
+    cursor: pointer;
   }
 }
 </style>
